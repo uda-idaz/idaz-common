@@ -1,0 +1,19 @@
+{
+  "name": "idaz-common",
+  "version": "0.1.0",
+  "description": "Common modules of uda-idaz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uda-idaz/idaz-common.git"
+  },
+  "author": "EJIE",
+  "license": "EUPL-1.1",
+  "bugs": {
+    "url": "https://github.com/uda-idaz/idaz-common/issues"
+  },
+  "homepage": "https://github.com/uda-idaz/idaz-common#readme"
+}
