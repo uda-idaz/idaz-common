@@ -18,8 +18,12 @@ module.exports = function(config) {
       {pattern: 'spec/helpers/**/*.js'},
       {pattern: 'build/src/**/*.js', included: false},
       {pattern: 'build/app/**/*.js', included: false},
-      {pattern: 'build/spec/**/*Spec.js', included: false}
+      {pattern: 'build/spec/**/*Spec.js', included: false},
+      {pattern: 'mock/json/**/*.json', included: false}
     ],
+    proxies: {
+      '/mock/': '/base/mock/'
+    },
 
     plugins: [
       'karma-es6-shim',

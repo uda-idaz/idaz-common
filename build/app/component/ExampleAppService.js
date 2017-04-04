@@ -37,6 +37,7 @@ define(['exports'], function (exports) {
     _createClass(ExampleAppService, [{
       key: 'setText',
       value: function setText(id, text) {
+        var a;
         document.getElementById(id).innerHTML = text;
       }
     }]);

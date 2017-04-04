@@ -1,6 +1,12 @@
 define(['exports'], function (exports) {
   'use strict';
 
+  /**
+   * Servicio de ejemplo.
+   * @class
+   * @module
+   */
+
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -30,9 +36,23 @@ define(['exports'], function (exports) {
   }();
 
   var ExampleSrcService = function () {
+
+    /**
+     * @constructs ExampleSrcService
+     * @param args
+     */
     function ExampleSrcService() {
       _classCallCheck(this, ExampleSrcService);
     }
+
+    /**
+    * Función de ejemplo
+    * @function
+    * @param value - Valor a evaluar.
+    * @return Devuelve si el parámetro es un entero o no
+    *
+    */
+
 
     _createClass(ExampleSrcService, [{
       key: 'isInteger',

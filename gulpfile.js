@@ -84,6 +84,20 @@ gulp.task('test', ['build:src', 'build:test', 'build:app'], function(cb) {
     }, cb).start();
 });
 
+gulp.task('serve:test', ['build:src', 'build:test', 'build:app'], function(cb) {
+  gulp.watch([
+    'app/**/*.js',
+    'src/**/*.js',
+    'spec/**/*.js'
+  ], ['build:src', 'build:test', 'build:app']);
+
+    new Server({
+        configFile: __dirname + '/karma.conf.js'
+    }, cb).start();
+
+
+});
+
 
 var runJsdoc2md = function (fileSource, outputPath) {
     var basename;
@@ -126,7 +140,7 @@ gulp.task('serve', () => {
       port: 9000,
       server: {
         baseDir: ['build/app'],
-        index: "index.html",
+        index: 'index.html',
         routes: {
           '/node_modules': 'node_modules'
         }
@@ -149,7 +163,7 @@ gulp.task('serve:dist', ['dummy'], () => {
     port: 9000,
     server: {
       baseDir: ['build/app'],
-      index: "index.html",
+      index: 'index.html',
       routes: {
         '/node_modules': 'node_modules'
       }
